@@ -42,13 +42,13 @@ are present.
 
 # Installation
 
-1) Clone into your ~/.config/ dir
-2) > cd ~/.config/tspawn/doc
-3) > cp example.xml ../cfg/sometmuxsessionname.xml
-2) Tailor sometmuxsessionname.xml to your needs
-3) Add a sometmuxsessionname alias to your shell's rc
-4) ???
-5) Profit
+1. Clone into your ~/.config/ dir
+2. > cd ~/.config/tspawn/doc
+3. > cp example.xml ../cfg/sometmuxsessionname.xml
+2. Tailor sometmuxsessionname.xml to your needs
+3. Add a sometmuxsessionname alias to your shell's rc
+4. ???
+5. Profit
 
 # Example Usage
 
