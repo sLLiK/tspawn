@@ -1,0 +1,17 @@
+<config>
+  <group name="Hackery" layout="tiled">
+    <command name="devbox1">cd ~/dev/</command>
+    <command name="devbox2">sllik@devbox2</command>
+  </group>
+  <group name="Lab" layout="even-horizontal">
+    <command name="labbox1">ssh sgee@labbox1</command>
+    <command name="labbox2">ssh sgee@labbox2</command>
+  </group>
+  <group name="Admin" layout="even-vertical">
+    <command name="prodcommand">ssh bofh@prodcommand</command>
+    <command name="prodserver2">ssh bofh@prodserver2</command>
+    <command name="prodserver3">ssh bofh@prodserver3</command>
+    <command name="prodserver4">ssh bofh@prodserver4</command>
+    <command name="prodserver5">ssh bofh@prodserver5</command>
+  </group>
+</config>
