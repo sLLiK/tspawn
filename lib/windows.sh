@@ -5,9 +5,9 @@
       panenames=`xmlstarlet sel -t -v "/session/window[${windowid}]/pane" ${config} | grep -v "%"`
   
       if [ $window == 0 ]; then
-          tmux -2 rename-window  -t ${session}:${window} ${winname}
+          tmux -2 rename-window -t ${session}:${window} ${winname}
       else
-          tmux -2 new-window     -t ${session}:${window} -n ${winname}
+          tmux -2 new-window    -t ${session}:${window} -n ${winname}
       fi
   
       . $BASE/lib/panes.sh
