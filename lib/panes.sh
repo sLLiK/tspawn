@@ -12,7 +12,6 @@
      commandid=1
      for command in ${commands}; do
          clearyn=`xmlstarlet sel -t -v "/session/window[${windowid}]/pane[${paneid}]/command[${commandid}]/@clear" ${config} | grep -v "%"`
-         echo "windowid = ${windowid}, pane = ${paneid}, commandid = ${commandid}, command = ${command}, clearyn = ${clearyn}"
 
          if [ "$clearyn" == "yes" ]; then
              tmux -2 send-keys -t ${session}:${window}.${pane} ${command} C-m C-l
