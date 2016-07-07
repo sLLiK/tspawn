@@ -24,17 +24,10 @@
               tmux -2 attach -t ${session}
           fi
       else
-    
-          tmux -2 new-session -d -s ${session}
-
-    ### Spawn loop
-    
-          . $BASE/lib/windows.sh
-    
-    ### Final prep
-    
-          tmux -2 select-window  -n
-          tmux -2 attach-session -t ${session}
+          tmux -2 new-session -d -s ${session}  ### Create
+          . $BASE/lib/windows.sh                ### Spawn loop
+          tmux -2 select-window  -n             ### Final prep
+          tmux -2 attach-session -t ${session}  ### Attach
           IFS=$OLDIFS
       fi
   else
