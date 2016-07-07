@@ -1,8 +1,9 @@
+
   for winname in $winnames; do
       pane=0
       windowid=$((window+1))
       layout=`xmlstarlet sel -t -v "/session/window[${windowid}]/@layout" ${config} | grep -v "%"`
-      panenames=`xmlstarlet sel -t -v "/session/window[${windowid}]/pane" ${config} | grep -v "%"`
+      panenames=`xmlstarlet sel -t -v "/session/window[${windowid}]/pane/@name" ${config} | grep -v "%"`
   
       if [ $window == 0 ]; then
           tmux -2 rename-window -t ${session}:${window} ${winname}

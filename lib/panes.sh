@@ -1,10 +1,11 @@
+
   for panename in ${panenames}; do
      if [ $pane != 0 ]; then
          tmux -2 split-window   -h -l 15
      fi 
    
      paneid=$((pane+1))
-     panename=`xmlstarlet sel -t -v "/session/window[${windowid}]/pane[${paneid}]/@name" ${config} | grep -v "%"`
+    #panename=`xmlstarlet sel -t -v "/session/window[${windowid}]/pane[${paneid}]/@name" ${config} | grep -v "%"`
      commands=`xmlstarlet sel -t -v "/session/window[${windowid}]/pane[${paneid}]/command" ${config} | grep -v "%"`
    
      tmux -2 send-keys -t ${session}:${window}.${pane}  "printf '\033]2;%s\033\\' '${panename}'" C-m C-l
