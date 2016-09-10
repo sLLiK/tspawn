@@ -1,0 +1,9 @@
+<!ELEMENT session (window)+>
+    <!ATTLIST session detach CDATA #REQUIRED>
+<!ELEMENT window  (pane)+>
+    <!ATTLIST window name CDATA #REQUIRED>
+    <!ATTLIST window layout CDATA #REQUIRED>
+<!ELEMENT pane  (command)*>
+    <!ATTLIST pane name CDATA #REQUIRED>
+<!ELEMENT command  (#PCDATA)*>
+    <!ATTLIST command clear CDATA #REQUIRED>

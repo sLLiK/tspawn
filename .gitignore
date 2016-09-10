@@ -1,2 +1,3 @@
 cfg/*
 !cfg/example.xml
+!cfg/tspawn.dtd
